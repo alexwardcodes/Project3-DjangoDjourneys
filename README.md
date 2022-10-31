@@ -48,9 +48,9 @@ At the end of the project we then had to deliver a presentation on our project c
 
 ### Task management  
 
-In order to create, assign and manage tasks, we created a public Trello board which all of the members our group could access. This made working on our project much easier and allowed us to work more effectively as a group. You can find the link to our Trello board [here](https://trello.com/b/BjeZaJ0E/rate-my-cat).
+We created a public Trello board that allowed all of the members of our team to access, create and update tasks to be tracked throughout the project. This allowed us to work extremely effectively as a team and kept us on target for our final presentation. You can find the link to our Trello board [here](https://trello.com/b/OvjiXE35/project3-django-djourney).
 
-![Screenshot 2022-09-09 at 12 46 53](https://media.git.generalassemb.ly/user/44781/files/518d6b93-92a0-493b-8d0a-33add6ebed95)
+![Screenshot 2022-10-31 at 12 06 56](https://user-images.githubusercontent.com/97313222/199004234-5f4b1dd3-26e6-43ad-b0b3-2a318e1c83fa.png)
 
 ### Development Overview
 
@@ -84,7 +84,8 @@ You can find the link to our ERD [here](https://git.generalassemb.ly/alex-sasha-
 
 You can find the link to our wireframes [here](https://git.generalassemb.ly/alex-sasha-ward/RateMyCat/blob/8c10dd626513ff39705da146a9542ff4496579a5/Wireframe.png)
 
-### User Stories
+### User Stories!
+
 
 As an unregistered user, I want a function to sign up to the site  
 As an unregistered user, I want a quick rundown of the site’s purpose  
