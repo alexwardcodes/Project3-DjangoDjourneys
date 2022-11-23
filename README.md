@@ -24,7 +24,7 @@ We worked as a team of three over the course of a week to deliver this project. 
 
 ## Technologies Used
 
-We built this project in Python and HTML within the Django framework, with CSS for the styling. We used Multer for image upload and deployed our app on Heroku.
+We built this project in Python and HTML within the Django framework, with CSS for the styling. We used Multer for image upload, PostgreSQL for database storage/retrieval and deployed our app on Heroku.
 
 ## Brief
 
@@ -82,7 +82,14 @@ Speaking to the team, we agreed that I would be team leader and handle managemen
 
 ### Task management  
 
-I created a public Trello board which all of our team could access in order to track, assign and manage tasks. This really helped us work collaboratively and we reviewed the Trello board on a daily basis each day to make sure we stayed up to date on what had been done, what needed to be assigned, and what hadn't been started yet. You can find the link to our Trello board [here](https://trello.com/b/OvjiXE35/project3-django-djourney).
+I created a public Trello board which all of our team could access in order to track, assign and manage tasks. This really helped us work collaboratively and we reviewed the Trello board on a daily basis each day to make sure we stayed up to date on what had been done, what needed to be assigned, and what hadn't been started yet.
+
+We delegated functions by feature to each of the members of our team:
+- I would work on creating user accounts, user profiles, the list of destinations and the main quiz function
+- One teammate would work on our search function and APIs for displaying destinations
+- One teammate would work on user review functionality, ratings, site styling/pagination and 3rd party APIs
+
+You can find the link to our Trello board [here](https://trello.com/b/OvjiXE35/project3-django-djourney).
 
 ![Screenshot 2022-11-04 at 14 44 05](https://media.git.generalassemb.ly/user/44781/files/30dd4f83-d60d-4f03-9d8c-c330f6087327)
 
@@ -160,13 +167,7 @@ The HTML in this file between **{% block content %}** and **{% endblock %}** is 
 
 ### Stage 7: Structuring logic and working on functions  
 
-We delegated functions by feature to each of the members of our team:
-
-- I would work on creating user accounts, user profiles, the list of destinations and the main quiz function 
-- One teammate would work on our search function and APIs for displaying destinations
-- One teammate would work on user review functionality, ratings, site styling/pagination and 3rd party APIs
-
-I started by looking for a suitable list of destinations to use for our databse. I settled on a list of 250 destinations collated by Nghia Nhuyen and offered for use on her GitHub [here](https://github.com/nghia-t-nguyen/travel-bot-project/blob/main/Travel-Destinations.csv). I edited the spreadsheet to include the **Name** of the destination, my teammates entered the **Location** and updated the **Country**for each one, and I also added the **Currency**. Later, I would also add a list of specific **Keywords** to each destination, which would be use later on in our quiz function:
+I started by looking for a suitable list of destinations to use for our database. I settled on a list of 250 destinations collated by Nghia Nhuyen and offered for use on her GitHub [here](https://github.com/nghia-t-nguyen/travel-bot-project/blob/main/Travel-Destinations.csv). I edited the spreadsheet to include the **Name** of the destination, my teammates entered the **Location** and updated the **Country**for each one, and I also added the **Currency**. Later, I would also add a list of specific **Keywords** to each destination, which would be use later on in our quiz function:
 
 ![Screenshot 2022-11-08 at 16 15 03](https://media.git.generalassemb.ly/user/44781/files/b68386f6-8bda-490a-b160-9332774edbdd)
 
@@ -179,7 +180,7 @@ This allowed my teammate to begin working on creating the APIs to retrieve all d
 
 ![Screenshot 2022-11-08 at 19 47 43](https://media.git.generalassemb.ly/user/44781/files/89e0f050-4273-44af-b4ba-69919883231b)
 
-as well as rendering details for individual destinations:
+As well as rendering details for individual destinations:
 
 ![Screenshot 2022-11-08 at 19 49 21](https://media.git.generalassemb.ly/user/44781/files/63557125-58c5-47da-aca5-4ef51813bee9)
   
@@ -211,7 +212,9 @@ With the sign up API already written, I created a **signals.py** file. This cont
 
 #### Destination Quiz (rango-query.js)
 
-I wrote the quiz function - the main element of our site - using jQuery. The quiz is actually structured as a form with a hidden input tag that contains an empty value attribute. The quiz itself is composed of a series of four questions. The user has three options per round, one of which is entirely neutral. With each answer they click, a specific keyword is pushed to this empty value attribute, or no keyword if their answer is neutral. When the user then clicks on the "Find my holiday!" button at the end of the quiz, the string stored in the value attribute is then used as a "profile" to search the database of destinations and return a list of destinations. Each destination in our database has a specific combination of keywords, meaning that only those destinations containing these keywords will be returned and made visible to the user, i.e. destinations matching their profile. jQuery is used to update the value attribute with each question answered, to make use of delay times and fade-out functionalities, thus providing a great experience for the person taking the quiz!
+I wrote the quiz function - the main element of our site - using jQuery. The quiz is actually structured as a form with a hidden input tag that contains an empty value attribute. The quiz itself is composed of a series of four questions. The user has three options per round, one of which is entirely neutral. With each answer they click, a specific keyword is pushed to this empty value attribute, or no keyword if their answer is neutral. When the user then clicks on the "Find my holiday!" button at the end of the quiz, the string stored in the value attribute is then used as a "profile" to search the database of destinations and return a list of destinations.
+
+Each destination in our database has a specific combination of keywords, meaning that only those destinations containing these keywords will be returned and made visible to the user, i.e. destinations matching their profile. jQuery is used to update the value attribute with each question answered, to make use of delay times and fade-out functionalities, thus providing a great experience for the person taking the quiz!
 
 ![Screenshot 2022-11-04 at 13 46 00](https://media.git.generalassemb.ly/user/44781/files/7906422e-ec6f-46a0-bbbf-a999d47e2280)
 
@@ -244,7 +247,7 @@ This means e.g. that the two divs that make up our quiz are displayed one above 
 
 ### Stage 10: Testing the site  
 
-We tested our quiz repeatedly to adjust timings and fadeouts, and tested the destination list, user signup, profile creation and API calls to make sure these were all working the way we wanted.
+We tested our quiz repeatedly to adjust timings and fadeouts, and tested the destination list, user signup, profile creation and API calls to make sure these were all working the way we wanted. We used plenty of console.logs to check what our functions were doing precisely, and where the information we were getting was incorrect or the function was working differently than anticipated, we were able to correct this. We checked all of our links to make sure these were correct, and checked the database to ensure all of our API calls were creating, updating and deleting information correctly. We also got friends to test the quiz to ensure the user experience was seamless and working as we wanted.
 
 ![Screenshot 2022-11-04 at 13 41 37](https://media.git.generalassemb.ly/user/44781/files/148b7553-02d5-4f75-b102-8b532450e3be)
 
