@@ -8,7 +8,7 @@ This project was assigned at the end of the eighth week of General Assembly’s 
 
 [You can find Django Djourneys deployed on this link](https://djangodjourney.herokuapp.com/). Take the quiz and see where your next journey should take you!
 
-![Screenshot 2022-11-04 at 13 36 24](https://media.git.generalassemb.ly/user/44781/files/ac47f2d6-d2d4-4e8a-b70d-e2e896eedb71)
+<img width="1919" height="1007" alt="Image" src="https://github.com/user-attachments/assets/00c2d3fb-301f-4bf2-bed0-51ef3b35d8d3" />
 
 ## Getting Started/Code Installation
 
@@ -91,7 +91,7 @@ We delegated functions by feature to each of the members of our team:
 
 You can find the link to our Trello board [here](https://trello.com/b/OvjiXE35/project3-django-djourney).
 
-![Screenshot 2022-11-04 at 14 44 05](https://media.git.generalassemb.ly/user/44781/files/30dd4f83-d60d-4f03-9d8c-c330f6087327)
+<img width="1907" height="1032" alt="Image" src="https://github.com/user-attachments/assets/8da7e68f-c6ec-4cff-8cf8-62ebce0daa44" />
 
 ## Build/Code Process
 
@@ -111,15 +111,16 @@ My team were all quite ready for a holiday and taking inspiration from the perfu
 
 We started by drawing up an ERD to map out the relations between all of our models and functionalities.
 
-![ERD](https://media.git.generalassemb.ly/user/44781/files/69120fdf-0cc4-4d7c-a748-4e32f7fdea1c)
+<img width="733" height="473" alt="Image" src="https://github.com/user-attachments/assets/b83ff5e1-3fcb-4afd-aaa3-9e24eea8ce5b" />
 
 #### Wireframes
 
 We then got to work on wireframing our site page by page:  
-<img src="https://media.git.generalassemb.ly/user/44781/files/b74fb9d7-4015-44e2-a1ff-7e5db2c2a89b" width="500" height="350">
-<img src="https://media.git.generalassemb.ly/user/44781/files/f34d814c-8202-4982-a4c3-3d3be94fb3e6" width="500" height="350">
-<img src="https://media.git.generalassemb.ly/user/44781/files/4d5d79f6-4512-4ffa-bba8-0dcdb1788710" width="500" height="550">
-<img src="https://media.git.generalassemb.ly/user/44781/files/c1177570-61e3-47c5-be71-fbfad99c0b06" width="500" height="550">
+
+<img width="500" height="350" alt="Image" src="https://github.com/user-attachments/assets/1814d05c-fd17-4d61-8fd4-b5d53bc06f20" />
+<img width="500" height="350" alt="Image" src="https://github.com/user-attachments/assets/d0ed07cb-3973-48da-ae0d-3de607007392" />
+<img width="500" height="550" alt="Image" src="https://github.com/user-attachments/assets/b293796d-7c4d-40ff-a66e-5e9622267408" />
+<img width="500" height="550" alt="Image" src="https://github.com/user-attachments/assets/8a802a6c-fe94-403e-9054-5e751bf78fd4" />
 
 #### User Stories
 
@@ -155,38 +156,38 @@ We defined our basic requirements at the outset:
 
 Once we had set out our basic requirements, we got started on the basic layout of the site in line with our wireframes. I created a **templates** folder in our main app directory where all of our html files would be located. We started with **base.html**, which is the file that serves as the base template for our site, with imported 3rd-party APIs, jQuery library, fonts, Bootstrap, CSS. The header contains our links to navigate the site, with additional links in the footer, while the **main** element uses backend code to allow us to insert other html files as the user navigates the site: 
 
-![Screenshot 2022-11-08 at 16 49 29](https://media.git.generalassemb.ly/user/44781/files/3107161d-3e90-4733-ae1e-d39209bc8d69)
+<img width="1575" height="987" alt="Image" src="https://github.com/user-attachments/assets/feb25dac-21c8-4f12-98b6-28f876ff4c6f" />
   
 The first page users see is **home.html**:
 
-![Screenshot 2022-11-08 at 16 55 25](https://media.git.generalassemb.ly/user/44781/files/a1bd7cca-990c-4d42-8e89-86388596e2ae)
+<img width="628" height="452" alt="Image" src="https://github.com/user-attachments/assets/2bbadb5b-d0c8-47bb-8229-867437bcf922" />
 
 The HTML in this file between **{% block content %}** and **{% endblock %}** is taken as a whole block of code and slotted into the **base.html** because we have added **{% extends 'base.html' %}** at the top of the file. In this way we began building the different pages for our site, with separate HTML files for the users' profile, user registration, and destinations both collectively as well as individually. We would later add separate files for our quiz, quiz results, and search functionality: 
 
-![Screenshot 2022-11-08 at 17 04 15](https://media.git.generalassemb.ly/user/44781/files/ce434032-2000-449d-ae7a-a72a2c82973b)
+<img width="1607" height="807" alt="Image" src="https://github.com/user-attachments/assets/f696cb69-427a-4bf5-927d-b461e39c0b0d" />
 
 ### Stage 7: Structuring logic and working on functions  
 
 I started by looking for a suitable list of destinations to use for our database. I settled on a list of 250 destinations collated by Nghia Nhuyen and offered for use on her GitHub [here](https://github.com/nghia-t-nguyen/travel-bot-project/blob/main/Travel-Destinations.csv). I edited the spreadsheet to include the **Name** of the destination, my teammates entered the **Location** and updated the **Country**for each one, and I also added the **Currency**. Later, I would also add a list of specific **Keywords** to each destination, which would be use later on in our quiz function:
 
-![Screenshot 2022-11-08 at 16 15 03](https://media.git.generalassemb.ly/user/44781/files/b68386f6-8bda-490a-b160-9332774edbdd)
+<img width="1598" height="286" alt="Image" src="https://github.com/user-attachments/assets/f2d343a1-bb9d-44c1-b0f0-53a55707cbd9" />
 
 With our basic list of destinations completed, I exported this as a .csv file and imported it into our database in PostgreSQL, taking care to deselect the ID tag when specifying the columns to import:
 
-![image](https://media.git.generalassemb.ly/user/44781/files/36b5a76c-e040-4c37-b61f-04e0509b4abf)
-![Screenshot 2022-10-02 at 15 07 33](https://media.git.generalassemb.ly/user/44781/files/69702af8-401c-4fc8-8100-885940647d60)
+<img width="1030" height="280" alt="Image" src="https://github.com/user-attachments/assets/3730d94f-84d1-4263-bc27-29bc710dc20d" />
+<img width="706" height="548" alt="Image" src="https://github.com/user-attachments/assets/4bfeb431-633e-4d36-842c-daedcc8eb722" />
 
 This allowed my teammate to begin working on creating the APIs to retrieve all destinations via our search function or when the user clicks on 'View All Destinations': 
 
-![Screenshot 2022-11-08 at 19 47 43](https://media.git.generalassemb.ly/user/44781/files/89e0f050-4273-44af-b4ba-69919883231b)
+<img width="901" height="596" alt="Image" src="https://github.com/user-attachments/assets/d6a67207-8930-45aa-8d22-7d4508588958" />
 
 As well as rendering details for individual destinations:
 
-![Screenshot 2022-11-08 at 19 49 21](https://media.git.generalassemb.ly/user/44781/files/63557125-58c5-47da-aca5-4ef51813bee9)
+<img width="890" height="89" alt="Image" src="https://github.com/user-attachments/assets/ddde5121-076d-4439-b5de-510c81391ca8" />
   
 Next, I worked on the user creation functionality. Creating the user account was simple enough with the use of a **signup** API. I wrote this to capture the information the user enters during sign-up as a POST request, validate this and then save the information as a new instance of User. With their user account now created, the user is then redirected to the index page:
 
-![Screenshot 2022-11-04 at 15 58 41](https://media.git.generalassemb.ly/user/44781/files/8f1d03f5-a926-4e14-b4a1-92428c30cfb7)
+<img width="890" height="606" alt="Image" src="https://github.com/user-attachments/assets/23e5236f-af0d-4b5a-b631-8ab0025f8a25" />
 
 The file **forms.py** contains a model for a form that allows the user to update their profile information: 
 
@@ -194,11 +195,11 @@ The file **forms.py** contains a model for a form that allows the user to update
   
 This is mirrored on the frontend with the following form:
 
-![Screenshot 2022-11-08 at 19 24 36](https://media.git.generalassemb.ly/user/44781/files/76f6e361-0fab-4f98-97d4-1e1ea8bf3b99)
+<img width="714" height="342" alt="Image" src="https://github.com/user-attachments/assets/30b1b7e4-aeb9-414a-9319-c6079d4e0aac" />
 
 The form is populated with their existing information, and once they click on the submit button, the **profile_update** API is triggered. The information entered in the frontend form is sent as a request to the backend, validated against the structure of the user and profile update forms, and if valid, both the user and profile objects are updated in the database:
 
-![Screenshot 2022-11-08 at 19 26 52](https://media.git.generalassemb.ly/user/44781/files/55f3a8d6-ac9b-4ec5-bb89-a70539f39da6)
+<img width="1142" height="814" alt="Image" src="https://github.com/user-attachments/assets/4dbe4c43-46d3-4d74-a58f-99295a216df1" />
 
 ### Favourite functions
 
@@ -208,7 +209,7 @@ The trick on this project was to allow the user to sign up and simultaneously cr
 
 With the sign up API already written, I created a **signals.py** file. This contains two signals that would cause two additional functions to be triggered on the creation of an instance of User, and when they update their information. This creates an instance of Profile, which stores information about the user. This is then displayed when they log into the website, and is based on the instance of User that has just been created. It was tricky to get working at first, but by using console.log on each line of my code, I was able to pinpoint my error, which was an incorrect import statement.
 
-![Screenshot 2022-11-04 at 16 02 35](https://media.git.generalassemb.ly/user/44781/files/24ee6053-5e0c-46b9-88b9-0cde729c38ca)
+<img width="858" height="292" alt="Image" src="https://github.com/user-attachments/assets/b8196904-c9b1-4616-8da8-970b0f3cdc09" />
 
 #### Destination Quiz (rango-query.js)
 
@@ -216,9 +217,9 @@ I wrote the quiz function - the main element of our site - using jQuery. The qui
 
 Each destination in our database has a specific combination of keywords, meaning that only those destinations containing these keywords will be returned and made visible to the user, i.e. destinations matching their profile. jQuery is used to update the value attribute with each question answered, to make use of delay times and fade-out functionalities, thus providing a great experience for the person taking the quiz!
 
-![Screenshot 2022-11-04 at 13 46 00](https://media.git.generalassemb.ly/user/44781/files/7906422e-ec6f-46a0-bbbf-a999d47e2280)
+<img width="476" height="320" alt="Image" src="https://github.com/user-attachments/assets/7747446b-7de1-43c5-b0f4-0d8cc112971f" />
 
-![Screenshot 2022-11-04 at 13 42 33](https://media.git.generalassemb.ly/user/44781/files/653ab9e4-b22c-44b5-97b7-38b16dcfc5c5)
+<img width="1488" height="964" alt="Image" src="https://github.com/user-attachments/assets/4f22dab9-22a8-429b-8e94-415758012bae" />
 
 ### Stage 8: Testing functions  
 
@@ -228,39 +229,39 @@ Testing functions along the way is how we managed to stay on track for delivery 
 
 We knew from the start that we wanted our site to be responsive, simple, clean and easy on the eyes. We drew inspiration from Skyscanner, Trip Advisor and other sites to style our website, with destinations presented as cards: 
 
-![Screenshot 2022-11-04 at 13 40 17](https://media.git.generalassemb.ly/user/44781/files/c61d0b1e-8965-401e-b3af-7a8081f9cd3e)
+<img width="859" height="493" alt="Image" src="https://github.com/user-attachments/assets/b1ba01b0-74f0-4129-b681-b9f78d844fcf" />
 
 When all destinations are displayed on the **destinations/index.html**, we first start with a div that has the classes of **"row card-group"**. A separate **card** div is then created for each destination, containing the destination image, name, review, and other details:
 
-![Screenshot 2022-11-09 at 10 30 31](https://media.git.generalassemb.ly/user/44781/files/6300fc11-9b16-470b-ab9c-8c5d082c7d86)
+<img width="1919" height="1039" alt="Image" src="https://github.com/user-attachments/assets/079efa1e-48fd-48d6-aa6e-2aadf0cc9dfb" />
 
 Providing feedback as a team, our teammate who focused on styling the site to make it fully mobile responsive when the width of 428px is reached:
 
 <p float="left">
-<img width="335" alt="Screenshot 2022-11-08 at 20 52 01" src="https://media.git.generalassemb.ly/user/44781/files/f232c29e-7e8c-428d-8be2-ef22c06059c7">
-<img width="337" alt="Screenshot 2022-11-08 at 20 51 35" src="https://media.git.generalassemb.ly/user/44781/files/7a329af5-598f-402f-9375-c2e39e6420cb">
+<img width="337" alt="Image" src="https://github.com/user-attachments/assets/c989051d-f387-4e5b-847c-67289c02a90d" />
+<img width="337" alt="Image" src="https://github.com/user-attachments/assets/28874a80-d96d-4d41-8280-4ab427f510a2" />
 </p>
 
 This means e.g. that the two divs that make up our quiz are displayed one above the other instead of side-by-side on a computer, and the font size is reduced to fit within the respective divs throughout the site:
 
-<img src="https://media.git.generalassemb.ly/user/44781/files/e58aca6a-cf6f-47ed-8ed9-ee749e87e259" height="500" width="250">
+<img src="https://github.com/user-attachments/assets/30ed6e62-2422-4e97-84be-4876a7910953" height="500" width="250">
 
 ### Stage 10: Testing the site  
 
 We tested our quiz repeatedly to adjust timings and fadeouts, and tested the destination list, user signup, profile creation and API calls to make sure these were all working the way we wanted. We used plenty of console.logs to check what our functions were doing precisely, and where the information we were getting was incorrect or the function was working differently than anticipated, we were able to correct this. We checked all of our links to make sure these were correct, and checked the database to ensure all of our API calls were creating, updating and deleting information correctly. We also got friends to test the quiz to ensure the user experience was seamless and working as we wanted.
 
-![Screenshot 2022-11-04 at 13 41 37](https://media.git.generalassemb.ly/user/44781/files/148b7553-02d5-4f75-b102-8b532450e3be)
+<img width="904" height="988" alt="Image" src="https://github.com/user-attachments/assets/7b64c488-6c96-46df-afd3-6a367e5d1b93" />
 
 ### Stage 11: Bonus features  
 
 The development of our project went so well that we were able to add additional functionality, such as the option for users to leave a review on destinations they have visited before. A form is shown to users on the detail page for the individual destination. Here users canleave a review on a destination:
 
-![Screenshot 2022-11-08 at 19 24 36](https://media.git.generalassemb.ly/user/44781/files/d9e89c66-d0a4-44e7-a914-a8479bf03c97)
+<img width="1142" height="814" alt="Image" src="https://github.com/user-attachments/assets/9b75f110-b779-41df-b3ff-e9b121183894" />
 
 When they click submit, the **add_review** API is triggered and information in the form is captured and validated against the review form model:
 
-![Screenshot 2022-11-08 at 19 51 14](https://media.git.generalassemb.ly/user/44781/files/fc8ec83f-7857-4be2-9edf-c35e10751ec9)
-![Screenshot 2022-11-08 at 20 28 34](https://media.git.generalassemb.ly/user/44781/files/b8cc8724-44d0-4ae9-8e6e-6cc0e6f31d1e)
+<img width="514" height="199" alt="Image" src="https://github.com/user-attachments/assets/7160eae8-e790-4aa1-95e9-a039aa18cb21" />
+<img width="581" height="236" alt="Image" src="https://github.com/user-attachments/assets/964839a5-fdad-4a2e-a583-bfbeeaf84f20" />
 
 If the content is valid according to the structure of the Review model, this is saved in the database as a new review and then listed on the individual destination.
 
@@ -277,9 +278,9 @@ We worked well as a team at investigating and resolving bugs as they came up. We
 The fact that our project is fully responsive is a big win:
 
 <p float="left">
-<img src="https://media.git.generalassemb.ly/user/44781/files/22f223c0-eda3-4bea-86b6-9c34ac12366a" width="300" height="600" >
-<img src="https://media.git.generalassemb.ly/user/44781/files/443edb29-3c53-4cc2-a6cc-ba4c7c88c4eb" width="300" height="600" >
-<img src="https://media.git.generalassemb.ly/user/44781/files/6269cc84-9ca8-4fc3-b93f-f0207ac7f148" width="300" height="600" >
+<img width="280" alt="Image" src="https://github.com/user-attachments/assets/6bda50a6-de3d-4e0e-b04e-3abf67dd962d" />
+<img width="280" alt="Image" src="https://github.com/user-attachments/assets/3682adc5-1ee8-4903-9543-18e66bdb70e9" />
+<img width="280" alt="Image" src="https://github.com/user-attachments/assets/1e98f4b8-a866-4dff-b81a-c4c99bbfe6e3" />
 </p>
                                                                                                                             
 I'm also very happy that with just a week or so of Python under our belts, we were able to produce an app of this caliber. I personally struggled with adjusting from JavaScript to Python in the beginning stages, but working with my team to build an app we could be proud of and resolving issues along the way, my confidence in the language grew and I am very proud of the product we were able to deliver.
