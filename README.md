@@ -191,7 +191,7 @@ Next, I worked on the user creation functionality. Creating the user account was
 
 The file **forms.py** contains a model for a form that allows the user to update their profile information: 
 
-<img width="714" alt="Screenshot 2022-11-08 at 19 17 41" src="https://media.git.generalassemb.ly/user/44781/files/8397f0b3-d898-461c-9863-09e949eed517">
+<img width="714" alt="Image" src="https://github.com/user-attachments/assets/471207166-30b1b7e4-aeb9-414a-9319-c6079d4e0aac">
   
 This is mirrored on the frontend with the following form:
 
