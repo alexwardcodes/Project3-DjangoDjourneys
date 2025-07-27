@@ -191,15 +191,15 @@ Next, I worked on the user creation functionality. Creating the user account was
 
 The file **forms.py** contains a model for a form that allows the user to update their profile information: 
 
-<img width="714" alt="Image" src="https://github.com/user-attachments/assets/471207166-30b1b7e4-aeb9-414a-9319-c6079d4e0aac">
+<img width="714" height="342" alt="Image" src="https://github.com/user-attachments/assets/30b1b7e4-aeb9-414a-9319-c6079d4e0aac" />
   
 This is mirrored on the frontend with the following form:
 
-<img width="714" height="342" alt="Image" src="https://github.com/user-attachments/assets/30b1b7e4-aeb9-414a-9319-c6079d4e0aac" />
+<img width="1142" height="814" alt="Image" src="https://github.com/user-attachments/assets/4dbe4c43-46d3-4d74-a58f-99295a216df1" />
 
 The form is populated with their existing information, and once they click on the submit button, the **profile_update** API is triggered. The information entered in the frontend form is sent as a request to the backend, validated against the structure of the user and profile update forms, and if valid, both the user and profile objects are updated in the database:
 
-<img width="1142" height="814" alt="Image" src="https://github.com/user-attachments/assets/4dbe4c43-46d3-4d74-a58f-99295a216df1" />
+<img width="858" height="292" alt="Image" src="https://github.com/user-attachments/assets/b8196904-c9b1-4616-8da8-970b0f3cdc09" />
 
 ### Favourite functions
 
@@ -209,7 +209,7 @@ The trick on this project was to allow the user to sign up and simultaneously cr
 
 With the sign up API already written, I created a **signals.py** file. This contains two signals that would cause two additional functions to be triggered on the creation of an instance of User, and when they update their information. This creates an instance of Profile, which stores information about the user. This is then displayed when they log into the website, and is based on the instance of User that has just been created. It was tricky to get working at first, but by using console.log on each line of my code, I was able to pinpoint my error, which was an incorrect import statement.
 
-<img width="858" height="292" alt="Image" src="https://github.com/user-attachments/assets/b8196904-c9b1-4616-8da8-970b0f3cdc09" />
+<img width="476" height="320" alt="Image" src="https://github.com/user-attachments/assets/7747446b-7de1-43c5-b0f4-0d8cc112971f" />
 
 #### Destination Quiz (rango-query.js)
 
@@ -217,9 +217,9 @@ I wrote the quiz function - the main element of our site - using jQuery. The qui
 
 Each destination in our database has a specific combination of keywords, meaning that only those destinations containing these keywords will be returned and made visible to the user, i.e. destinations matching their profile. jQuery is used to update the value attribute with each question answered, to make use of delay times and fade-out functionalities, thus providing a great experience for the person taking the quiz!
 
-<img width="476" height="320" alt="Image" src="https://github.com/user-attachments/assets/7747446b-7de1-43c5-b0f4-0d8cc112971f" />
-
 <img width="1488" height="964" alt="Image" src="https://github.com/user-attachments/assets/4f22dab9-22a8-429b-8e94-415758012bae" />
+
+<img width="859" height="493" alt="Image" src="https://github.com/user-attachments/assets/b1ba01b0-74f0-4129-b681-b9f78d844fcf" />
 
 ### Stage 8: Testing functions  
 
@@ -229,16 +229,16 @@ Testing functions along the way is how we managed to stay on track for delivery 
 
 We knew from the start that we wanted our site to be responsive, simple, clean and easy on the eyes. We drew inspiration from Skyscanner, Trip Advisor and other sites to style our website, with destinations presented as cards: 
 
-<img width="859" height="493" alt="Image" src="https://github.com/user-attachments/assets/b1ba01b0-74f0-4129-b681-b9f78d844fcf" />
+<img width="1919" height="1039" alt="Image" src="https://github.com/user-attachments/assets/079efa1e-48fd-48d6-aa6e-2aadf0cc9dfb" />
 
 When all destinations are displayed on the **destinations/index.html**, we first start with a div that has the classes of **"row card-group"**. A separate **card** div is then created for each destination, containing the destination image, name, review, and other details:
 
-<img width="1919" height="1039" alt="Image" src="https://github.com/user-attachments/assets/079efa1e-48fd-48d6-aa6e-2aadf0cc9dfb" />
+<img alt="Image" src="https://github.com/user-attachments/assets/c989051d-f387-4e5b-847c-67289c02a90d" />
 
 Providing feedback as a team, our teammate who focused on styling the site to make it fully mobile responsive when the width of 428px is reached:
 
 <p float="left">
-<img width="337" alt="Image" src="https://github.com/user-attachments/assets/c989051d-f387-4e5b-847c-67289c02a90d" />
+<img width="337" alt="Image" src="https://github.com/user-attachments/assets/606eb7ae-a369-4746-a25c-617fcaee9390" />
 <img width="337" alt="Image" src="https://github.com/user-attachments/assets/28874a80-d96d-4d41-8280-4ab427f510a2" />
 </p>
 
